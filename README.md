@@ -1,4 +1,4 @@
-# Todo Lista Vanila JavaScript
+# TODO List Vanilla JavaScript
 
 Gestor de tareas realizado totalmente con JavaScript (ES2019) usado para el manejo del DOM
 
@@ -9,7 +9,7 @@ Gestor de tareas realizado totalmente con JavaScript (ES2019) usado para el mane
 
 ## Acerca de
 
-Este es un típico proyecto de una lista de tareas usando JavaScript puro (Vanila JS) con el objetivo de mostrar que no se necesita depender de jQuery para tareas comunes de manejo del DOM
+Este es un típico proyecto de una lista de tareas usando JavaScript puro (Vanilla JS) con el objetivo de mostrar que no se necesita depender de jQuery para tareas comunes de manejo del DOM
 
 Se ha usado:
 
