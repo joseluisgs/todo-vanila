@@ -1,0 +1,29 @@
+{
+  "name": "todo-vanila",
+  "version": "1.0.0",
+  "description": "Ejemplo de lista de tareas realizada con JavaScript para el manejo del DOM (Vanila JS)",
+  "main": "index.js",
+  "scripts": {
+    "serve": "gulp",
+    "clean": "rm -rf src/css && rm -rf src/fonts && rm -rf src/js",
+    "reinstall": "rm -rf node_modules && npm install",
+    "dist": "npm run undist && mkdir dist && cp src/*.html dist && cp -r src/js dist && cp -r src/css dist && cp -r src/fonts dist && cp -r src/images dist",
+    "undist": "rm -rf dist"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "font-awesome": "^4.7.0"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.26.12",
+    "eslint": "^7.9.0",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-plugin-import": "^2.22.0",
+    "gulp": "^4.0.2",
+    "gulp-cli": "^2.3.0",
+    "gulp-minify": "^3.1.0",
+    "gulp-sass": "^4.1.0"
+  }
+}
