@@ -1,4 +1,4 @@
-# TODO VANILA JS
+# Todo Lista Vanila JavaScript
 
 Gestor de tareas realizado totalmente con JavaScript (ES2019) usado para el manejo del DOM
 
