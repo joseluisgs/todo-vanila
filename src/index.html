@@ -21,7 +21,37 @@
   </head>
 
   <body>
-    <p>TODO-LIST</p>
+    <div id="todo">
+      <!-- Encabezado de presentacion -->
+      <!-- Como vamos a usar JS es importante que pongamos id para el manejo de las clases y de los selectores -->
+      <h1>Lista de Tareas <i id="pencil" class="fas fa-pencil-alt"></i> </h1>
+      <!-- Formulario de entrada -->
+      <input type="text" placeholder="Añadir nueva tarea">
+      
+      <!-- Lista de taras que iremos inyectando con tareas nuevas -->
+      <ul id="tareas" class="tareas">
+        <li><span><i class="fas fa-trash-alt"></i></span>Programar con JavaScript</li>
+      </ul>
+      
+      <!-- Mis botones -->
+      <div id="buttons">
+        <button id="save" class="save">Salvar</button>
+        <button id="clear" class="clear">Limpiar</button>
+        <button id="trucos" class="trucos">Trucos</button>
+      </div>
+    </div>
+    
+    <div id="overlay">
+      <a href="javascript:void(0)" class="closebtn">&times;</a>
+      <ul class="tips">
+        <li>Haz clic en el lápiz para mostrar u ocultar la entrada de nuevas tareas</li>
+        <li>Escribe la tarea y pulsa enter para añadirla a a la lista</li>
+        <li>Sitúa el ratón encima de una tarea para marcarla como realizada o borrarla</li>
+        <li>Pulsa el botón de limpiar para eliminar todas las tareas</li>
+        <li>Pulsa el botón de salvar para guardar las tareas y recuperarlas cuando entres otra vez</li>
+      </ul>
+    
+    </div>
 
     <!-- SCRIPTS -->
     <!-- Mis Scripts -->
