@@ -1,18 +1,8 @@
+/* eslint-disable no-undef */
 /* MIS SCRIPT */
 
-// Notificaciones
-$(document).ready(function () {
-    $(".show-toast").click(function () {
-        $("#myToast").toast('show');
-    });
-});
-
-// Transiciones
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
-        });
-    });
-});
+// Recogemos los elementos con selectores
+// O haciendo uso de los elementos por clase
+// const input = document.querySelector("input[type = 'text']");
+const input = document.getElementById('nueva_tarea');
+console.log(input);
