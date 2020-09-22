@@ -104,7 +104,7 @@ input:focus {
   font-family: 'Architects Daughter';
 }
 
-// Espan de la lista
+// span de la lista, por defecto 0
 span {
   margin-right: 10px;
   text-align: center;
@@ -178,6 +178,7 @@ button {
   overflow-x: hidden;
   transition: 0.5s;
   -webkit-transition: 0.5s;
+
   // Botón de cerrar
   .closebtn {
     position: absolute;
@@ -187,6 +188,7 @@ button {
     color: #270553;
     cursor: pointer;
   }
+
   // Lista
   li {
     padding: 8px;
@@ -204,20 +206,22 @@ button {
   padding: 0;
   // Para cada elemento
   li {
-    background: #27055318;
+    background: #2705530e;
     height: 50px;
     line-height: 50px;
+    // Cambiamos el cursos y la letra
     cursor: pointer;
     font-size: 20px;
-  }
-  // Para el resto
-  li:nth-child(2n) {
-    background: #edf1f5;
-  }
-  li:hover span {
-    width: 50px;
-    opacity: 1;
-    margin-left: 5px;
+    // Al hacer hover
+    &:hover span {
+      width: 50px;
+      opacity: 1;
+      margin-left: 5px;
+    }
+    // Cambiamos el fondo a los elementos pares
+    &:nth-child(2n) {
+      background: #edf1f5;
+    }
   }
 }
 
@@ -231,7 +235,7 @@ button {
   text-decoration: line-through;
 }
 
-// Elementos gráficos
+// Elementos gráficos e iconos
 .fa-pencil-alt {
   float: right;
   padding-top: 8px;
@@ -239,7 +243,7 @@ button {
 .fa-trash-alt {
   color: #7f7fd5;
 }
-// Trucos
+// Lista de trucos
 .tips {
   position: relative;
   top: 20%;
