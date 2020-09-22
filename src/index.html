@@ -1,5 +1,6 @@
-<!DOCTYPE html>
-<html>
+<DOCTYPE html!>
+  <html>
+
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
@@ -8,39 +9,71 @@
     <title>TODO List Vanilla JS</title>
 
     <!-- ESTILOS -->
+    <!-- FA 4 Offline y FA5 via CDN (Aunque luego lo incluyo con un JS) -->
     <link rel="stylesheet" href="css/font-awesome.min.css" />
-    <!-- FA 4 Offline -->
-    <link rel="stylesheet" href="css/main.css" />
+    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
+      integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous"> -->
+
     <!-- Mis Estilos -->
+    <link rel="stylesheet" href="css/main.css" />
 
     <!-- FAVICON -->
     <link rel="shortcut icon" type="image/png" href="images/favicon.png" />
 
     <!-- MIS FUENTES -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" />
+    <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap" rel="stylesheet">
   </head>
 
   <body>
-    <div id="todo">
+    <!-- SECCION PRINCIPAL -->
+    <main id="todo">
       <!-- Encabezado de presentacion -->
       <!-- Como vamos a usar JS es importante que pongamos id para el manejo de las clases y de los selectores -->
       <h1>Lista de Tareas <i id="pencil" class="fas fa-pencil-alt"></i> </h1>
       <!-- Formulario de entrada -->
       <input type="text" placeholder="Añadir nueva tarea">
-      
+
       <!-- Lista de taras que iremos inyectando con tareas nuevas -->
-      <ul id="tareas" class="tareas">
+      <ul class="tareas">
         <li><span><i class="fas fa-trash-alt"></i></span>Programar con JavaScript</li>
       </ul>
-      
+
       <!-- Mis botones -->
       <div id="buttons">
-        <button id="save" class="save">Salvar</button>
-        <button id="clear" class="clear">Limpiar</button>
-        <button id="trucos" class="trucos">Trucos</button>
+        <button class="save">Salvar</button>
+        <button class="clear">Limpiar</button>
+        <button class="trucos">Trucos</button>
       </div>
-    </div>
-    
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="container">
+        <div id="ftr-wrap">
+          <div class="ftr-links">
+            <ul>
+              <li><a href="https://twitter.com/joseluisgonsan" target="_blank" class="text-light">
+                  <i class="fa fa-twitter lead"></i>
+                </a></li>
+              <li><a href="https://github.com/joseluisgs" target="_blank" class="text-light">
+                  <i class="fa fa-github lead"></i>
+                </a></li>
+              <li><a href="https://www.linkedin.com/in/joseluisgonsan/" target="_blank" class="text-light">
+                  <i class="fa fa-linkedin lead"></i>
+                </a></li>
+            </ul>
+          </div>
+          <div class="footer-copyright">
+            <p class="copyright">&copy; José Luis González Sánchez</p>
+          </div>
+          <div>
+            <p class="footer-parrafo">2020</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Mensajes de ayuda que mostraremos -->
     <div id="overlay">
       <a href="javascript:void(0)" class="closebtn">&times;</a>
       <ul class="tips">
@@ -50,13 +83,15 @@
         <li>Pulsa el botón de limpiar para eliminar todas las tareas</li>
         <li>Pulsa el botón de salvar para guardar las tareas y recuperarlas cuando entres otra vez</li>
       </ul>
-    
+
     </div>
+
 
     <!-- SCRIPTS -->
     <!-- Mis Scripts -->
     <script src="js/main-min.js" charset="utf-8"></script>
-    <!-- FONT AWASOME 5 -->
+    <!-- FA 5 script JS  -->
     <script src="https://kit.fontawesome.com/46f8ac5714.js" crossorigin="anonymous"></script>
   </body>
-</html>
+
+  </html>
