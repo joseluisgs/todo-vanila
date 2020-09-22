@@ -19,6 +19,8 @@ Se ha usado:
 
 ## Project setup
 
+Este proyecto está automatizdo con Gulp sobre NodeJS
+
 ```
 npm install
 ```
