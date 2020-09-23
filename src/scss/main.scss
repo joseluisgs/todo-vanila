@@ -73,6 +73,17 @@ footer {
 }
 
 // ELEMENTOS
+// Main o container pirncipal
+#todo {
+  margin: 0 auto;
+  // Sombras
+  box-shadow: 0 0 2em gray;
+  max-width: 400px;
+  height: 100%;
+  background: whitesmoke;
+  position: relative; // centrado
+}
+
 // Encabezado
 h1 {
   text-transform: uppercase; // En mayúsculas
@@ -95,16 +106,16 @@ input {
   border: 3px solid gray;
   color: gray;
   font-family: 'Architects Daughter';
-}
-input:focus {
-  background: #f7f7f7;
-  border: 3px solid #7981f8;
-  outline: none;
-  color: #111764;
-  font-family: 'Architects Daughter';
+  &:focus {
+    background: #f7f7f7;
+    border: 3px solid #7981f8;
+    outline: none;
+    color: #111764;
+    font-family: 'Architects Daughter';
+  }
 }
 
-// span de la lista, por defecto 0
+// span de la lista, por defecto opacidad y animacion 0
 span {
   margin-right: 10px;
   text-align: center;
@@ -115,9 +126,35 @@ span {
   transition: 0.3s linear; // Lineal
 }
 
-// En cada elemento i, le cambio el cursos
+// Cursor en los gráficos
 i {
   cursor: pointer;
+}
+
+//Lista de tareas
+.todos {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  // Para cada elemento
+  li {
+    background: #2705530e;
+    height: 50px;
+    line-height: 50px;
+    // Cambiamos el cursos y la letra
+    cursor: pointer;
+    font-size: 20px;
+    // Al hacer hover
+    &:hover span {
+      width: 50px;
+      opacity: 1;
+      margin-left: 5px;
+    }
+    // Cambiamos el fondo a los elementos pares
+    &:nth-child(2n) {
+      background: #edf1f5;
+    }
+  }
 }
 
 // Botones
@@ -154,16 +191,7 @@ button {
   position: absolute;
   bottom: 5px;
 }
-// Lista de tareas
-#todo {
-  margin: 0 auto;
-  // Sombras
-  box-shadow: 0 0 2em gray;
-  max-width: 400px;
-  height: 100%;
-  background: whitesmoke;
-  position: relative;
-}
+
 // Ayuda
 #overlay {
   height: 0;
@@ -180,7 +208,7 @@ button {
   -webkit-transition: 0.5s;
 
   // Botón de cerrar
-  .closebtn {
+  #close_btn {
     position: absolute;
     top: 15px;
     right: 40px;
@@ -189,47 +217,31 @@ button {
     cursor: pointer;
   }
 
-  // Lista
-  li {
-    padding: 8px;
-    list-style-type: circle;
-    font-size: 30px;
-    color: #270553;
-    display: block;
-  }
-}
-
-//Lista
-.todos {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  // Para cada elemento
-  li {
-    background: #2705530e;
-    height: 50px;
-    line-height: 50px;
-    // Cambiamos el cursos y la letra
-    cursor: pointer;
-    font-size: 20px;
-    // Al hacer hover
-    &:hover span {
-      width: 50px;
-      opacity: 1;
-      margin-left: 5px;
-    }
-    // Cambiamos el fondo a los elementos pares
-    &:nth-child(2n) {
-      background: #edf1f5;
+  // Lista de overlay
+  .tips {
+    position: relative;
+    top: 20%;
+    width: 100%;
+    text-align: center;
+    margin-top: 25px;
+    // Para cada elemento de la lista
+    li {
+      padding: 8px;
+      list-style-type: circle;
+      font-size: 30px;
+      color: #270553;
+      display: block;
     }
   }
 }
 
-// Otras clases para manejar con JS
+// Otras clases para manejar con JS de efectos
 .display {
   display: none;
   transition: 0.3s linear;
 }
+
+// Estilo de la lista pulsada
 .checked {
   color: gray;
   text-decoration: line-through;
@@ -243,16 +255,8 @@ button {
 .fa-trash-alt {
   color: #7f7fd5;
 }
-// Lista de trucos
-.tips {
-  position: relative;
-  top: 20%;
-  width: 100%;
-  text-align: center;
-  margin-top: 25px;
-}
 
-// Adaptación a distintas configuraciones de
+// ADAPTACION A RESOLUCIONES Y DISPOSITIVOS
 @media screen and (max-height: 450px) {
   .overlay a {
     font-size: 20px;
