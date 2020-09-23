@@ -4,22 +4,23 @@
 
 // Recogemos los elementos con selectores que vamos a usar
 // O haciendo uso de los elementos por clase
-// Voy a usar querySelector que así los encuetro igual que lo definido en el CSS
-// Aunque prefiero los getElementBy... porque así sabes lo que estas cogiendo y no presenta el problema de querySelectorAll()
+// Se puede usar querySelector que así los encuetro igual que lo definido en el CSS
+// El unico problema de los querySelector es querySelectorAll() que devueve objetos estaticos
+// Por lo tanto no podemos modificarlos como hacemos con los span sobre la marcha y los eventos
 // Recomiendo estos tutoriales
 // https://tobiasahlin.com/blog/move-from-jquery-to-vanilla-javascript/
 // https://javascript.info/searching-elements-dom
 // https://www.w3schools.com/jsref/met_document_queryselector.asp
 
-const input = document.getElementById('nueva_tarea'); // document.querySelector('#nueva_tarea'); // por id: document.getElementById('nueva_tarea');
-const ul = document.getElementsByClassName('todos')[0]; // Recojo el primero // document.querySelector('.todos'); // por clase: document.getElementsByClassName('todos');
+const input = document.getElementById('todo_new'); // document.querySelector('#nueva_tarea'); // por id: document.getElementById('nueva_tarea');
+const ul = document.getElementById('todo_list'); // document.getElementsByClassName('todos')[0]; // Recojo el primero // document.querySelector('.todos');
 // Con spans es interesante porque si usas querySelectorAll es estático y no lo puedes mofificar (añadir eventos) dinamicamente si modificas el doom
 const spans = document.getElementsByTagName('span'); // document.querySelectorAll('span'); // por tag: document.getElementsByTagName("span");
-const pencil = document.querySelector('#pencil');
-const saveBtn = document.querySelector('#save_btn');
-const clearBtn = document.querySelector('#clear_btn');
-const tipsBtn = document.querySelector('#tips_btn');
-const closeBtn = document.querySelector('#close_btn');
+const pencil = document.getElementById('pencil'); // document.querySelector('#pencil');
+const saveBtn = document.getElementById('save_btn'); // document.querySelector('#save_btn');
+const clearBtn = document.getElementById('clear_btn'); // document.querySelector('#clear_btn');
+const tipsBtn = document.getElementById('tips_btn'); // document.querySelector('#tips_btn');
+const closeBtn = document.getElementById('close_btn'); // document.querySelector('#close_btn');
 const overlay = document.getElementById('overlay');
 
 // Función para testear los elementos DOM recogidos
@@ -61,7 +62,7 @@ function deleteTodo() {
   });
 }
 
-// Evento que al pulsar intro cargamos en la lista
+// Evento que al pulsar intro cargamos en la lista el contenido del input
 input.addEventListener('keypress', (keyPressed) => {
   // Si es intro
   if (keyPressed.which === 13) {
@@ -113,14 +114,14 @@ clearBtn.addEventListener('click', () => {
 // Evento que muestra los trucos
 tipsBtn.addEventListener('click', () => {
   console.log('Has pulsado Trucos');
-  overlay.style.height = '100%';
+  overlay.style.height = '100%'; // cambiamos el estilo y le damos altura del 100%
 });
 
-// close overlay when close btn is clicked
+// Evento que cierra la ventana de trucos
 closeBtn.addEventListener('click', (e) => {
   console.log('Has pulsado Cerrar');
   e.preventDefault; // Elimina el evento
-  overlay.style.height = '0';
+  overlay.style.height = '0'; // la minimizamos totalmente
 });
 
 // Flujo de funciones iniciales
