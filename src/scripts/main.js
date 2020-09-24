@@ -6,6 +6,7 @@
 // O haciendo uso de los elementos por clase
 // Voy a usar querySelector que así los encuetro igual que lo definido en el CSS
 // Aunque prefiero los getElementBy... porque así sabes lo que estas cogiendo y no presenta el problema de querySelectorAll()
+// y te ayuda a la reactivdad o a que estén vivos. Tutorial recomendado numero 2
 // Recomiendo estos tutoriales
 // https://tobiasahlin.com/blog/move-from-jquery-to-vanilla-javascript/
 // https://javascript.info/searching-elements-dom
